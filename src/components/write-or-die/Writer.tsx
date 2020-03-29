@@ -8,9 +8,8 @@ const styles = {
     background-color: transparent;
     border-color:#eee;
     border-width: 5px;
-    font-size: calc(10px + 2vmin);
-    margin-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
+    font-size: 22px;
     `,
   active: css`
     color: #0f0;
@@ -18,15 +17,14 @@ const styles = {
   difficulty: css`
     text-align: center;  
     margin-top: 20px;
-    font-size: calc(10px + .8vmin);
     background-color: #000;
     padding: 10px;
+    margin-bottom: 20px;
     color: #fff;
     font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
     `,
   difficultyTitle: css`
     font-weight: 800;
-    padding-bottom: 0px;
     `,
   difficultyItem: css`
     display:inline;
@@ -85,11 +83,9 @@ const Writer: React.FC = () => {
   };
 
   const moveCaretAtEnd = (e: any): void => {
-    setTimeout(() => {
-      const tempValue = e.target.value;
-      e.target.value = '';
-      e.target.value = tempValue;
-    }, 1);
+    const tempValue = e.target.value;
+    e.target.value = '';
+    e.target.value = tempValue;
   };
 
   const setDifficulty = (newLevel: string): void => {
