@@ -36,6 +36,9 @@ const styles = {
   inspiration: css`
     text-transform: uppercase;
   `,
+  die: css`
+    text-align: center;
+  `,
 };
 
 const IgnoredCharacters = [8, 46, 32, 13];
@@ -117,10 +120,9 @@ const Writer: React.FC = () => {
           </p>
         )))}
       </div>
-      {hasStarted && <p>Seconds left: {Number(count).toFixed(2)}</p>}
-      {!hasStarted && <p>Begin writing something around the word <strong css={styles.inspiration}>{inspiration}</strong>. <a href="#" onClick={() => setInspiration(randomWords(1))}>Try another Suggestion...</a></p>}
-      {hasEnded && <h1>DIE!</h1>}
-      {hasEnded && <p>Why not share your story on the social medias?</p>}
+      {<p>Begin writing something around the word <strong css={styles.inspiration}>{inspiration}</strong>. <a href="#" onClick={() => setInspiration(randomWords(1))}>Try another Suggestion...</a></p>}
+      <p>Seconds till you die: {Number(count).toFixed(2)}</p>
+      {hasEnded && <h1 css={styles.die}>DIE!</h1>}
       <TextareaAutosize
         autoFocus
         css={styles.writer}
