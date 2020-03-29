@@ -102,24 +102,15 @@ const Writer: React.FC = () => {
     <div>
       <div css={styles.difficulty}>
         <div css={styles.difficultyTitle}>Difficulty</div>
-        <div
-          css={[styles.difficultyItem, level === 'Easy' ? styles.active : '']}
-          onClick={(): void => setDifficulty('Easy')}
-        >
-          Easy (10s)
-        </div>
-        <div
-          css={[styles.difficultyItem, level === 'Normal' ? styles.active : '']}
-          onClick={(): void => setDifficulty('Normal')}
-        >
-          Normal (5s)
-        </div>
-        <p
-          css={[styles.difficultyItem, level === 'Hard' ? styles.active : '']}
-          onClick={(): void => setDifficulty('Hard')}
-        >
-          Hard (2s)
-        </p>
+        {Object.keys(Levels).map(((key: string) => (
+          <p
+            key={`difficulty-${key}`}
+            css={[styles.difficultyItem, key === level ? styles.active : '']}
+            onClick={(): void => setDifficulty(key)}
+          >
+            {key}
+          </p>
+        )))}
       </div>
       {hasStarted && <p>Seconds left: {Number(count).toFixed(2)}</p>}
       {!hasStarted && <p>Begin writing something...</p>}
