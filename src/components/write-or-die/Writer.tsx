@@ -35,9 +35,11 @@ const styles = {
     `,
   inspiration: css`
     text-transform: uppercase;
+    text-align: center;
   `,
   die: css`
     text-align: center;
+    color: #f00!important;
   `,
 };
 
@@ -120,9 +122,9 @@ const Writer: React.FC = () => {
           </p>
         )))}
       </div>
-      {<p>Begin writing something around the word <strong css={styles.inspiration}>{inspiration}</strong>. <a href="#" onClick={() => setInspiration(randomWords(1))}>Try another Suggestion...</a></p>}
-      <p>Seconds till you die: {Number(count).toFixed(2)}</p>
-      {hasEnded && <h1 css={styles.die}>DIE!</h1>}
+      <p>Begin writing something around this suggestion. <a href="#" onClick={() => setInspiration(randomWords(1))}>Try another Suggestion...</a></p>
+      <h2 css={styles.inspiration}>{inspiration}</h2>
+      {hasEnded && <h1 css={styles.die}>You Died!</h1>}
       <TextareaAutosize
         autoFocus
         css={styles.writer}
@@ -131,6 +133,7 @@ const Writer: React.FC = () => {
         onKeyUp={handleKeyUp}
         onFocus={moveCaretAtEnd}
       />
+      <p>Time left: {Number(count).toFixed(2)}s</p>
 
       {hasEnded && (
         <p>
