@@ -17,10 +17,10 @@ const PageTemplate = css`
   }
 `;
 
-const About: React.FC = () => (
+const WriteOrDie: React.FC = () => (
   <IndexLayout>
     <Helmet>
-      <title>About</title>
+      <title>Write or Die!</title>
     </Helmet>
     <Wrapper css={PageTemplate}>
       <header css={[outer, SiteHeader]}>
@@ -31,7 +31,7 @@ const About: React.FC = () => (
       <main id="site-main" className="site-main" css={[SiteMain, outer]}>
         <article className="post page" css={[PostFull, NoImage]}>
           <PostFullHeader>
-            <PostFullTitle>About</PostFullTitle>
+            <PostFullTitle>Write or Die!</PostFullTitle>
           </PostFullHeader>
 
           <PostFullContent className="post-full-content">
@@ -48,4 +48,4 @@ const About: React.FC = () => (
   </IndexLayout>
 );
 
-export default About;
+export default WriteOrDie;

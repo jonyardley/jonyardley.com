@@ -53,7 +53,7 @@ const AuthorBio = styled.h2`
   line-height: 1.3em;
   font-weight: 300;
   letter-spacing: 0.5px;
-  opacity: 0.8;
+  text-shadow: 0px 1px 3px rgba(0,0,0,1);
 `;
 
 const Bull = styled.span`

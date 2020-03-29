@@ -51,7 +51,7 @@ export interface WebsiteConfig {
 const config: WebsiteConfig = {
   title: 'Jon Yardley',
   description: 'Tech Director, Pianist and Improviser',
-  coverImage: 'img/blog-cover.jpg',
+  coverImage: 'img/yardley-splash.jpeg',
   lang: 'en',
   siteUrl: 'https://jonyardley.com',
   facebook: 'https://www.facebook.com/jcyardley',

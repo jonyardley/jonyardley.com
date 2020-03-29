@@ -26,16 +26,19 @@ export const SiteTitle = styled.h1`
   padding: 0;
   font-size: 3.8rem;
   font-weight: 700;
+  text-shadow: 0px 2px 12px rgba(0,0,0,.8);
 `;
 
 export const SiteDescription = styled.h2`
   z-index: 10;
   margin: 0;
-  padding: 5px 0;
+  padding: 10px 20px;
+  margin-top: 10px;
   font-size: 2.2rem;
   font-weight: 300;
   letter-spacing: 0.5px;
-  opacity: 0.8;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6));
+  text-shadow: 0px 2px 8px rgba(0,0,0,1);
 `;
 
 export const PostFeed = css`

@@ -90,11 +90,13 @@ const Footer: React.FC = () => {
             </a>
           )}
 
-          <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">
-            Ghost
+          <a href="https://www.instagram.com/jonyardley/" target="_blank" rel="noopener noreferrer">
+            Instagram
           </a>
 
-          <a href="/rss.xml">RSS</a>
+          <a href="https://github.com/jonyardley/" target="_blank" rel="noopener noreferrer">
+            Github
+          </a>
         </SiteFooterNav>
       </div>
     </footer>

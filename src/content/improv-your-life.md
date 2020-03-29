@@ -3,7 +3,7 @@ layout: post
 title: Finding joy in uncertainty - Learning to 'Improv your life'
 image: img/Yardley_improv_FB.jpg
 author: Jon Yardley
-date: 2018-09-30T07:03:47.149Z
+date: 2019-09-25T17:00:00.000Z
 draft: false
 tags: 
   - Improv
