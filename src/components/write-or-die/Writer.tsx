@@ -83,9 +83,12 @@ const Writer: React.FC = () => {
   };
 
   const moveCaretAtEnd = (e: any): void => {
-    const tempValue = e.target.value;
-    e.target.value = '';
-    e.target.value = tempValue;
+    const { target } = e;
+    const tempValue = target.value;
+    setTimeout(() => {
+      target.value = '';
+      target.value = tempValue;
+    }, 500);
   };
 
   const setDifficulty = (newLevel: string): void => {
