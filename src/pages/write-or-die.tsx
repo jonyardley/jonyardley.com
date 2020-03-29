@@ -9,6 +9,7 @@ import { PostFullHeader, PostFullTitle, NoImage, PostFull } from '../templates/p
 import { PostFullContent } from '../components/PostContent';
 import Footer from '../components/Footer';
 import Helmet from 'react-helmet';
+import Writer from '../components/write-or-die/Writer';
 
 const PageTemplate = css`
   .site-main {
@@ -36,9 +37,8 @@ const WriteOrDie: React.FC = () => (
 
           <PostFullContent className="post-full-content">
             <div className="post-content">
-              <p>
-                Coming soon...
-              </p>
+              <p>Write a story and don't stop. After a few seconds of not typing, you die. Deleting stuff doesn't count, so keep those ideas flowing.</p>
+              <Writer/>
             </div>
           </PostFullContent>
         </article>
