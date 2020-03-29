@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import { css } from '@emotion/core';
+import randomWords from 'random-words';
 
 const styles = {
   writer: css`
@@ -32,6 +33,9 @@ const styles = {
     cursor: pointer;
     font-weight: 300;
     `,
+  inspiration: css`
+    text-transform: uppercase;
+  `,
 };
 
 const IgnoredCharacters = [8, 46, 32, 13];
@@ -53,6 +57,7 @@ const Writer: React.FC = () => {
   const [count, setCount] = useState(Levels[DefaultLevel]);
   const [hasStarted, setHasStarted] = useState(false);
   const [hasEnded, setHasEnded] = useState(false);
+  const [inspiration, setInspiration] = useState(randomWords(1));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -113,7 +118,7 @@ const Writer: React.FC = () => {
         )))}
       </div>
       {hasStarted && <p>Seconds left: {Number(count).toFixed(2)}</p>}
-      {!hasStarted && <p>Begin writing something...</p>}
+      {!hasStarted && <p>Begin writing something around the word <strong css={styles.inspiration}>{inspiration}</strong>. <a href="#" onClick={() => setInspiration(randomWords(1))}>Try another Suggestion...</a></p>}
       {hasEnded && <h1>DIE!</h1>}
       {hasEnded && <p>Why not share your story on the social medias?</p>}
       <TextareaAutosize
