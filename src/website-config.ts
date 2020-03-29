@@ -52,7 +52,6 @@ const config: WebsiteConfig = {
   title: 'Jon Yardley',
   description: 'Tech Director, Pianist and Improviser',
   coverImage: 'img/blog-cover.jpg',
-  logo: 'img/ghost-logo.png',
   lang: 'en',
   siteUrl: 'https://jonyardley.com',
   facebook: 'https://www.facebook.com/jcyardley',
