@@ -104,7 +104,7 @@ const Writer: React.FC = () => {
   const setDifficulty = (newLevel: string): void => {
     if (!hasStarted) {
       setLevel(newLevel);
-      setCount(Levels[level]);
+      setCount(Levels[newLevel]);
     }
   };
 
