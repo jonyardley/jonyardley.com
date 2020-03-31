@@ -1,20 +1,41 @@
 module.exports = {
-  root: true,
+  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended'
+  ],
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   env: {
-    node: true,
-    jest: true,
     browser: true,
+    node: true,
+    es6: true
   },
-  extends: ['xo-space/esnext', 'xo-react/space', 'xo-typescript'],
+  plugins: ['@typescript-eslint', 'react'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+    sourceType: 'module' // Allows for the use of imports
+  },
   rules: {
-    'object-curly-spacing': ['error', 'always'],
-    '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
-    '@typescript-eslint/explicit-function-return-type': 0,
-    'capitalized-comments': 0,
-    'comma-dangle': ['error', 'always-multiline'],
-    'react/jsx-tag-spacing': 0,
-    'react/prop-types': 0,
-    'no-warning-comments': 0,
-    'complexity': 0,
+    'react/prop-types': 'off', // Disable prop-types as we use TypeScript for type checking
+    '@typescript-eslint/explicit-function-return-type': 'off'
   },
+  overrides: [
+    // Override some TypeScript rules just for .js files
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off' //
+      }
+    }
+  ]
 };
